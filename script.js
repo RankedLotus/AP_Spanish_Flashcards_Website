@@ -10,9 +10,10 @@ const back = flashcard.querySelector(".back");
 
 // Initialize flashcard
 function showCard(index) {
+  flashcard.classList.remove("flipped");
   front.textContent = flashcards[index].question;
   back.textContent = flashcards[index].answer;
-  flashcard.classList.remove("flipped");
+  
 }
 
 showCard(currentIndex);
