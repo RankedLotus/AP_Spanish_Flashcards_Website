@@ -1,7 +1,7 @@
 const flashcards = [
     {q: "hay que", a: "we must"},
     {q: "el cura", a: "the priest"},
-    {q: "mandar", a: "to control/to command/to send"},
+    {q: "mandar", a: "to control/ to command/ to send"},
     {q: "rey", a: "king"},
     {q: "huir", a: "to run away"},
     {q: "disponibles", a: "available"},
@@ -11,8 +11,8 @@ const flashcards = [
     {q: "ventajas", a: "advantages"},
     {q: "el nivel", a: "the level"},
     {q: "herramientas", a: "tools"},
-    {q: "el aprendizaje", a: "the learning/the lesson"},
-    {q: "aprovechar", a: "to use/to take advantage of"},
+    {q: "el aprendizaje", a: "the learning/ the lesson"},
+    {q: "aprovechar", a: "to use/ to take advantage of"},
     {q: "suele", a: "tends to"},
     {q: "debíl", a: "weak"},
     {q: "hechar", a: "to throw"},
@@ -26,7 +26,25 @@ const flashcards = [
     {q: "flujos", a: "flows"},
     {q: "envejecer", a: "to age"},
     {q: "ambos", a: "both"},
-    {q: "fallecer", a: "to die"}
+    {q: "fallecer", a: "to die"},
+    {q: "los atrasos", a: "the delays"},
+    {q: "desanimar", a: "to discourage/ to dishearten"},
+    {q: "desperdiciar", a: "to waste"},
+    {q: "inigualables", a: "unmatched/ unrivaled"},
+    {q: "añadir", a: "to add/ to append"},
+    {q: "movilizar", a: "to mobilize"},
+    {q: "alcanzar", a: "to reach/ to attain"},
+    {q: "el provecho", a: "the profit"},
+    {q: "mis consejos", a: "my advice"},
+    {q: "acomodadas", a: "well-off"},
+    {q: "vinculada", a: "linked"},
+    {q: "amontonarse", a: "to accumulate/ to pile up"},
+    {q: "el desacuerdo", a: "the disagreement"},
+    {q: "ellos son humíldes", a: "they are humble"},
+    {q: "gozar", a: "to enjoy"},
+    {q: "ajenos", a: "strangers"},
+    {q: "disminuir", a: "to reduce/ to diminish"},
+    {q: "carecer de", a: "lack of"}
 ];
 
 function shuffleArray(array) {
