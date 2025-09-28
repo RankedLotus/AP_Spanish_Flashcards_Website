@@ -55,10 +55,22 @@ function shuffleArray(array) {
     return array;
 }
 
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+const is_mobile = isMobile();
+
 function playSound(id, time, volume = 1.0) {
   const sfx = document.getElementById(id);
   sfx.currentTime = time;
-  sfx.volume = volume;
+  if(is_mobile) {
+    sfx.volume = 0.0;
+  }
+  else {
+    sfx.volume = volume;
+  }
+  
   sfx.play();
 }
 

@@ -27,7 +27,7 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
@@ -96,6 +96,6 @@ header {
 
 .footer {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   align-content: center;
 }
