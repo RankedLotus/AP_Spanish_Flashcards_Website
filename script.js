@@ -55,6 +55,13 @@ function shuffleArray(array) {
     return array;
 }
 
+function playSound(id, time, volume = 1.0) {
+  const sfx = document.getElementById(id);
+  sfx.currentTime = time;
+  sfx.volume = volume;
+  sfx.play();
+}
+
 shuffleArray(flashcards) // why you can just call it like this I have no clue
 
 let numFlipped = 0
@@ -87,6 +94,7 @@ showCard(currentIndex);
 
 // Flip the flashcard
 document.getElementById("flip").addEventListener("click", () => {
+  playSound("card-flip-sfx", 0.3);
   flashcard.style.transition = "transform 0.6s"; // restore transition
   flashcard.classList.toggle("flipped");
   numFlipped += 1;
@@ -95,17 +103,20 @@ document.getElementById("flip").addEventListener("click", () => {
 
 // Next flashcard
 document.getElementById("next").addEventListener("click", () => {
+  playSound("woosh-sfx", 0.5);
   currentIndex = (currentIndex + 1) % flashcards.length;
   showCard(currentIndex);
 });
 
 // Previous flashcard
 document.getElementById("prev").addEventListener("click", () => {
+  playSound("woosh-sfx", 0.5);
   currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
   showCard(currentIndex);
 });
 
 document.getElementById("shuffle").addEventListener("click", () => {
+  playSound("card-shuffle-sfx", 0.1, 0.2);
     shuffleArray(flashcards);
     currentIndex = (currentIndex + 1) % flashcards.length;
     showCard(currentIndex);
