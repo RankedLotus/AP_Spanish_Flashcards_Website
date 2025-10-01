@@ -44,7 +44,17 @@ const flashcards = [
     {q: "gozar", a: "to enjoy"},
     {q: "ajenos", a: "strangers"},
     {q: "disminuir", a: "to reduce/ to diminish"},
-    {q: "carecer de", a: "lack of"}
+    {q: "carecer de", a: "lack of"},
+    {q: "inprescindible", a: "essential"},
+    {q: "tiende puentes", a: "builds bridges"},
+    {q: "ni siquiera", a: "not even"},
+    {q: "de la cuna a la tumba", a: "from the cradle to the grave/ throughout life"},
+    {q: "incierta", a: "uncertain"},
+    {q: "desprovista", a: "devoid/ lacking"},
+    {q: "solía", a: "tended to"},
+    {q: "sin tregua", a: "relentlessly"},
+    {q: "esquina", a: "corner"},
+    {q: "muda", a: "mute/ muted"}
 ];
 
 function shuffleArray(array) {
