@@ -92,14 +92,18 @@ const flashcard = document.getElementById("flashcard");
 const front = flashcard.querySelector(".front");
 const back = flashcard.querySelector(".back");
 const cnum = document.getElementById("curr_num");
-const numf = document.getElementById("num_flipped")
+const numf = document.getElementById("num_flipped");
+
+// having to do with indexing and limit button
+let nCards = flashcards.length;
+let limitAmt = 10;
 
 function updateNumFlipped() {
     numf.textContent = "Cards flipped this session: " + numFlipped;
 }
 
 //initialize stats
-cnum.textContent = "Current number of cards in deck: " + flashcards.length
+cnum.textContent = "Current number of cards in deck: " + nCards
 
 // Initialize flashcard
 function showCard(index) {
@@ -126,20 +130,43 @@ document.getElementById("flip").addEventListener("click", () => {
 // Next flashcard
 document.getElementById("next").addEventListener("click", () => {
   playSound("woosh-sfx", 0.5);
-  currentIndex = (currentIndex + 1) % flashcards.length;
+  currentIndex = (currentIndex + 1) % nCards;
   showCard(currentIndex);
+});
+
+// Limit number of flashcards
+document.getElementById("limit").addEventListener("click", () => {
+  if(nCards < flashcards.length) {
+    nCards = flashcards.length;
+  }
+  else {
+    nCards = limitAmt;
+  }
+  cnum.textContent = "Current number of cards in deck: " + nCards
 });
 
 // Previous flashcard
 document.getElementById("prev").addEventListener("click", () => {
   playSound("woosh-sfx", 0.5);
-  currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
+  currentIndex = (currentIndex - 1 + nCards) % nCards;
   showCard(currentIndex);
+});
+
+document.getElementById("+").addEventListener("click", () => {
+  limitAmt += 1;
+  nCards = limitAmt;
+  cnum.textContent = "Current number of cards in deck: " + nCards
+});
+
+document.getElementById("-").addEventListener("click", () => {
+  limitAmt -= 1;
+  nCards = limitAmt;
+  cnum.textContent = "Current number of cards in deck: " + nCards
 });
 
 document.getElementById("shuffle").addEventListener("click", () => {
   playSound("card-shuffle-sfx", 0.1, 0.2);
     shuffleArray(flashcards);
-    currentIndex = (currentIndex + 1) % flashcards.length;
+    currentIndex = (currentIndex + 1) % nCards;
     showCard(currentIndex);
 });
