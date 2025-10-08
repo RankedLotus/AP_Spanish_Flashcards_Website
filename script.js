@@ -54,7 +54,31 @@ const flashcards = [
     {q: "solía", a: "tended to"},
     {q: "sin tregua", a: "relentlessly"},
     {q: "esquina", a: "corner"},
-    {q: "muda", a: "mute/ muted"}
+    {q: "muda", a: "mute/ muted"},
+    {q: "arreglar", a: "to organize/ adjust/ fix"},
+    {q: "brincar", a: "to jump"},
+    {q: "además", a: "furthermore"},
+    {q: "la despedida", a: "the goodbye/ farewell"},
+    {q: "de que se trata", a: "what it's about"},
+    {q: "bastante", a: "enough/ pretty"},
+    {q: "amenazan", a: "they threatened"},
+    {q: "la red", a: "the net (internet)"},
+    {q: "redes sociales", a: "social medias"},
+    {q: "a tráves", a: "throughout"},
+    {q: "asomarse", a: "to check out/ to take a look"},
+    {q: "dar un vistazo", a: "to take a look"},
+    {q: "el ordenador", a: "the computer"},
+    {q: "vacio", a: "empty"},
+    {q: "lleno", a: "full"},
+    {q: "rueda", a: "wheel"},
+    {q: "asustar", a: "to fear"},
+    {q: "arrepentimiento", a: "regret"},
+    {q: "el villancico", a: "the christmas carol"},
+    {q: "atreverse", a: "to dare"},
+    {q: "hoy dia", a: "at the present time/ nowadays"},
+    {q: "partir", a: "to leave"},
+    {q: "la escasez", a: "the lack"},
+    {q: "en actual", a: "currently"}
 ];
 
 function shuffleArray(array) {
