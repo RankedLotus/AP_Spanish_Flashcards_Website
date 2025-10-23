@@ -1,4 +1,4 @@
-const flashcards = [
+const genflashcards = [
     {q: "hay que", a: "we must"},
     {q: "el cura", a: "the priest"},
     {q: "mandar", a: "to control/ to command/ to send"},
@@ -78,8 +78,38 @@ const flashcards = [
     {q: "hoy dia", a: "at the present time/ nowadays"},
     {q: "partir", a: "to leave"},
     {q: "la escasez", a: "the lack"},
-    {q: "en actual", a: "currently"}
+    {q: "en actual", a: "currently"},
+    {q: "no mola nada", a: "it's not cool at all"}
 ];
+
+const u1flashcards = [
+  {q: "amenazar", a: "to threaten"},
+  {q: "arrastrar", a: "to drag"},
+  {q: "alcanzar", a: "to reach"},
+  {q: "apoyar", a: "to support"},
+  {q: "asomarse", a: "to look out"},
+  {q: "atreverse", a: "to dare"},
+  {q: "animarse", a: "to cheer up"},
+  {q: "arriesgarse", a: "to take a risk"},
+  {q: "arrojar", a: "to throw"},
+  {q: "aprovechar", a: "to take advantage"},
+  {q: "crear", a: "to create"},
+  {q: "crecer", a: "to grow"},
+  {q: "creer", a: "to believe"},
+  {q: "criar", a: "to raise/ to grow up"},
+  {q: "conocer", a: "to be familiar with"},
+  {q: "desempeñar", a: "to play (the role)/ to perform"},
+  {q: "echar", a: "to throw"},
+  {q: "entretener", a: "to entertain"},
+  {q: "embellecer", a: "to glamorize/ to embellish"},
+  {q: "", a: ""},
+];
+
+
+const all_decks = [u1flashcards, genflashcards]
+const deck_names = ["temas 1-6 vocab", "general vocab"]
+let deck_index = 0
+let flashcards = all_decks[deck_index]
 
 function shuffleArray(array) {
     for(let i = array.length - 1; i > 0; i--) {
@@ -115,8 +145,12 @@ let currentIndex = 0;
 const flashcard = document.getElementById("flashcard");
 const front = flashcard.querySelector(".front");
 const back = flashcard.querySelector(".back");
+
+// the elements that show the stats
 const cnum = document.getElementById("curr_num");
 const numf = document.getElementById("num_flipped");
+const cdeck = document.getElementById("which_deck")
+cdeck.textContent = "Current deck: " + deck_names[deck_index]
 
 // having to do with indexing and limit button
 let nCards = flashcards.length;
@@ -124,6 +158,7 @@ let limitAmt = 10;
 
 function updateNumFlipped() {
     numf.textContent = "Cards flipped this session: " + numFlipped;
+    cnum.textContent = "Current number of cards in deck: " + flashcards.nCards
 }
 
 //initialize stats
@@ -141,6 +176,8 @@ function showCard(index) {
 }
 
 showCard(currentIndex);
+
+
 
 // Flip the flashcard
 document.getElementById("flip").addEventListener("click", () => {
@@ -193,4 +230,14 @@ document.getElementById("shuffle").addEventListener("click", () => {
     shuffleArray(flashcards);
     currentIndex = (currentIndex + 1) % nCards;
     showCard(currentIndex);
+});
+
+document.getElementById("change_deck").addEventListener("click", () => {
+  deck_index = (deck_index + 1) % all_decks.length;
+  flashcards = all_decks[deck_index];
+  updateNumFlipped();
+  shuffleArray(flashcards);
+  currentIndex = (currentIndex + 1) % nCards;
+  showCard(currentIndex);
+  cdeck.textContent = "Current deck: " + deck_names[deck_index]
 });
