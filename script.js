@@ -79,7 +79,8 @@ const genflashcards = [
     {q: "partir", a: "to leave"},
     {q: "la escasez", a: "the lack"},
     {q: "en actual", a: "currently"},
-    {q: "no mola nada", a: "it's not cool at all"}
+    {q: "no mola nada", a: "it's not cool at all"},
+    {q: "la rueda", a: "the wheel"}
 ];
 
 const u1flashcards = [
@@ -92,7 +93,7 @@ const u1flashcards = [
   {q: "animarse", a: "to cheer up"},
   {q: "arriesgarse", a: "to take a risk"},
   {q: "arrojar", a: "to throw"},
-  {q: "aprovechar", a: "to take advantage"},
+  {q: "aprovechar", a: "to use/ to take advantage of"},
   {q: "crear", a: "to create"},
   {q: "crecer", a: "to grow"},
   {q: "creer", a: "to believe"},
@@ -102,7 +103,36 @@ const u1flashcards = [
   {q: "echar", a: "to throw"},
   {q: "entretener", a: "to entertain"},
   {q: "embellecer", a: "to glamorize/ to embellish"},
-  {q: "", a: ""},
+  {q: "evitar", a: "to avoid"},
+  {q: "fallecer", a: "to die"},
+  {q: "lanzar", a: "to launch"},
+  {q: "mandar", a: "to send/ to command"},
+  {q: "marcharse", a: "to leave"},
+  {q: "oscurecer", a: "to darken"},
+  {q: "iluminar", a: "to illuminate"},
+  {q: "padecer", a: "to suffer"},
+  {q: "pelear", a: "to fight"},
+  {q: "quitar", a: "to remove/ to take off"},
+  {q: "soler", a: "to tend to/ to be in the habit of"},
+  {q: "temer", a: "to fear"},
+  {q: "valer la pena", a: "worth the effort"},
+  {q: "vencer", a: "to conquer"},
+  {q: "unir", a: "to unite"},
+  {q: "vincular", a: "to link"},
+  {q: "unificar", a: "to unify"},
+  {q: "enseñar", a: "to teach"},
+  {q: "grabar", a: "to record/ to print"},
+  {q: "gozar", a: "to enjoy"},
+  {q: "abrazar", a: "to embrace"},
+  {q: "esconder", a: "to hide"},
+  {q: "quejarse", a: "to complain"},
+  {q: "gestionar", a: "to manage/ to control"},
+  {q: "el aprendizaje", a: "the learning"},
+  {q: "el conocimiento", a: "the familiarity/ the knowledge"},
+  {q: "el riesgo", a: "the risk"},
+  {q: "el ordenador", a: "the computer"},
+  {q: "el temor", a: "the fear"},
+  {q: "el villancico", a: "the christmas carol"}
 ];
 
 
@@ -158,7 +188,7 @@ let limitAmt = 10;
 
 function updateNumFlipped() {
     numf.textContent = "Cards flipped this session: " + numFlipped;
-    cnum.textContent = "Current number of cards in deck: " + flashcards.nCards
+    cnum.textContent = "Current number of cards in deck: " + nCards
 }
 
 //initialize stats
@@ -235,6 +265,7 @@ document.getElementById("shuffle").addEventListener("click", () => {
 document.getElementById("change_deck").addEventListener("click", () => {
   deck_index = (deck_index + 1) % all_decks.length;
   flashcards = all_decks[deck_index];
+  nCards = flashcards.length
   updateNumFlipped();
   shuffleArray(flashcards);
   currentIndex = (currentIndex + 1) % nCards;
