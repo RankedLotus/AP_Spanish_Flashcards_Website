@@ -115,7 +115,13 @@ header {
 } */
 
 .footer {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 5px;
   align-content: center;
+}
+
+.tips {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
