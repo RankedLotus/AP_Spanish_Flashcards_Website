@@ -80,7 +80,19 @@ const genflashcards = [
     {q: "la escasez", a: "the lack"},
     {q: "en actual", a: "currently"},
     {q: "no mola nada", a: "it's not cool at all"},
-    {q: "la rueda", a: "the wheel"}
+    {q: "la rueda", a: "the wheel"},
+    {q: "los hechos", a: "the facts"},
+    {q: "que se puede afirmar", a: "what can be stated"},
+    {q: "pertenecer a", a: "to belong to"},
+    {q: "sendas", a: "paths"},
+    {q: "reñir", a: "to quarrel/ to argue"},
+    {q: "catedráticos", a: "professors"},
+    {q: "chistes", a: "jokes"},
+    {q: "la frialdad", a: "the coldness"},
+    {q: "fallos", a: "failiures"},
+    {q: "no obstante", a: "nevertheless/ however"},
+    {q: "por tanto", a: "therefore"},
+    {q: "los alumnos", a: "the students"}
 ];
 
 const u1flashcards = [
@@ -135,9 +147,72 @@ const u1flashcards = [
   {q: "el villancico", a: "the christmas carol"}
 ];
 
+const u2flashcards = [
+  {q: "la cita", a: "the quote, the citation"},
+  {q: "las cifras", a: "the digits"},
+  {q: "las estadísticas", a: "the statistics"},
+  {q: "el deslance", a: "the outcome"},
+  {q: "la escasez", a: "the lack"},
+  {q: "la ausencia", a: "the abscence"},
+  {q: "la encuesta", a: "the survey"},
+  {q: "la entrevista", a: "the interview"},
+  {q: "la edad promedio", a: "the average age"},
+  {q: "el folleto", a: "brochure/ advertisement"},
+  {q: "los gastos", a: "the cost"},
+  {q: "los pagos", a: "the cost"},
+  {q: "la grabación", a: "the recording"},
+  {q: "el gráfico", a: "the graphic"},
+  {q: "la mezcla", a: "the mix"},
+  {q: "la moraleja", a: "the lesson"},
+  {q: "sin fines de lucro", a: "non-profit"},
+  {q: "el papel", a: "the paper/ the role"},
+  {q: "el punto de vista", a: "point of view/ perspective"},
+  {q: "el propósito", a: "the purpose"},
+  {q: "los puentes", a: "the bridges/ the ties"},
+  {q: "el rocio de las flores en el amanecer", a: "the dew on the flowers at dawn/ hope (?)"},
+  {q: "la solidaridad", a: "the solidarity"},
+  {q: "la regla de oro", a: "the golden rule"},
+  {q: "el sueldo", a: "the salary"},
+  {q: "el seguro social", a: "social security"},
+  {q: "la taza", a: "the cup"},
+  {q: "la tasa", a: "the rate"},
+  {q: "el terciopelo", a: "velvet"},
+  {q: "la seda", a: "silk"},
+  {q: "la ternura", a: "the tenderness"},
+  {q: "jubilar", a: "to retire"},
+  {q: "le salen canas", a: "they're growing grey hairs/ they're aging"},
+  {q: "envejecer", a: "to age"},
+  {q: "actual", a: "current"},
+  {q: "alta calidad", a: "high quality"},
+  {q: "baja calidad", a: "low quality"},
+  {q: "a tráves de...", a: "throughout..."},
+  {q: "los alrededores", a: "the surroundings"},
+  {q: "a mi alrededor", a: "in my area/ vicinity"},
+  {q: "según la fuente", a: "acccording to the source"},
+  {q: "respaldar", a: "to support (think back up)"},
+  {q: "sostener", a: "to sustain/ to support"},
+  {q: "brindar servicios", a: "to offer services"},
+  {q: "crecer", a: "to grow"},
+  {q: "cosechar", a: "to harvest"},
+  {q: "derrotar", a: "to vanquish/ to defeat"},
+  {q: "destacar", a: "to emphasize/ highlight"},
+  {q: "enfatizar", a: "to emphasize/ highlight"},
+  {q: "recaudar fondos", a: "to raise funds"},
+  {q: "recorrer", a: "to travel"},
+  {q: "resumir", a: "to summarize"},
+  {q: "repasar", a: "to review (think pass through again)"},
+  {q: "el cantante", a: "the singer"},
+  {q: "secuestrar", a: "to kidnap/ sieze/ rob(?)"},
+  {q: "sembrar las semillas", a: "to sow the seeds"},
+  {q: "significar", a: "to mean"},
+  {q: "suceder", a: "to occur/ to happen"},
+  {q: "enterarse", a: "to find out/ to learn"},
+  {q: "averiguar", a: "to figure out"},
+  {q: "hallar", a: "to discover/ to learn"}
+]
 
-const all_decks = [u1flashcards, genflashcards]
-const deck_names = ["temas 1-6 vocab", "general vocab"]
+const all_decks = [u2flashcards, u1flashcards, genflashcards]
+const deck_names = ["palabras mágicas: frequencia mediana", "temas 1-6 vocab", "general vocab"]
 let deck_index = 0
 let flashcards = all_decks[deck_index]
 
