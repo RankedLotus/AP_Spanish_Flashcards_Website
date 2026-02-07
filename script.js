@@ -1,3 +1,5 @@
+/* ALL THE DECKS HERE */
+
 const genflashcards = [
     {q: "hay que", a: "we must"},
     {q: "el cura", a: "the priest"},
@@ -517,11 +519,17 @@ const ojosDC611 = [
   { q: "sentimiento", a: "feeling, sentiment" }
 ]
 
+/* DECK MANAGEMENT */
 const all_decks = [u2flashcards, u1flashcards, genflashcards, ojosDCflashcards, repaso1sem2, ojosDC611]
 const deck_names = ["palabras mágicas: frequencia mediana", "temas 1-6 vocab", "general vocab", "ojos de carmen 1-3", "repaso uno sem 2", "ojos de carmen 6-11"]
+
+/* DEFAULT DECK INDEX */
 let deck_index = 3
+
+/* SELECT CURRENT DECK */
 let flashcards = all_decks[deck_index]
 
+/* this is lowkey a neat shuffle */
 function shuffleArray(array) {
     for(let i = array.length - 1; i > 0; i--) {
         const rn = Math.floor(Math.random() * (i + 1));
@@ -530,12 +538,13 @@ function shuffleArray(array) {
     return array;
 }
 
-function isMobile() { //this lowkey doesn't work
+function isMobile() { //this lowkey doesn't work :(
   return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 const is_mobile = isMobile();
 
+/* idk its a bit annnoying I think but its weird to have silent flashcards */
 function playSound(id, time, volume = 1.0) {
   const sfx = document.getElementById(id);
   sfx.currentTime = time;
@@ -548,6 +557,8 @@ function playSound(id, time, volume = 1.0) {
   
   sfx.play();
 }
+
+// ====================================================
 
 shuffleArray(flashcards) // why you can just call it like this I have no clue
 
@@ -588,6 +599,11 @@ function showCard(index) {
 
 showCard(currentIndex);
 
+// ====================================================
+
+/* BUTTON CONTROLS !!!
+all the code below here is repetitive as hell
+there must be a better way to clean this up*/
 
 
 // Flip the flashcard
@@ -624,18 +640,21 @@ document.getElementById("prev").addEventListener("click", () => {
   showCard(currentIndex);
 });
 
+/* INCREASE THE LIMIT */
 document.getElementById("+").addEventListener("click", () => {
   limitAmt += 1;
   nCards = limitAmt;
   cnum.textContent = "Current number of cards in deck: " + nCards
 });
 
+/* DECREASE THE LIMIT */
 document.getElementById("-").addEventListener("click", () => {
   limitAmt -= 1;
   nCards = limitAmt;
   cnum.textContent = "Current number of cards in deck: " + nCards
 });
 
+/* SHUFFLING */
 document.getElementById("shuffle").addEventListener("click", () => {
   playSound("card-shuffle-sfx", 0.1, 0.2);
     shuffleArray(flashcards);
@@ -643,6 +662,7 @@ document.getElementById("shuffle").addEventListener("click", () => {
     showCard(currentIndex);
 });
 
+/* CHANGING DECK */
 document.getElementById("change_deck").addEventListener("click", () => {
   deck_index = (deck_index + 1) % all_decks.length;
   flashcards = all_decks[deck_index];
