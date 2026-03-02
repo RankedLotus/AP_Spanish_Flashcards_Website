@@ -519,12 +519,98 @@ const ojosDC611 = [
   { q: "sentimiento", a: "feeling, sentiment" }
 ]
 
+const apvoc1 = [
+  { q: "El acceso a la tecnología", a: "Access to technology" },
+  { q: "Los efectos de la tecnología en el individuo y en la sociedad", a: "The effects of technology on the individual and on society" },
+  { q: "El cuidado de la salud y la medicina", a: "Health care and medicine" },
+  { q: "Las innovaciones tecnológicas", a: "Technological innovations" },
+  { q: "Los fenómenos naturales", a: "Natural phenomena" },
+  { q: "La ciencia y la ética", a: "Science and ethics" },
+
+  { q: "La huella de carbón", a: "Carbon footprint" },
+  { q: "La diversión / el ocio", a: "Entertainment / leisure" },
+  { q: "La comodidad (una vida cómoda)", a: "Comfort (a comfortable life)" },
+  { q: "Enviar / mandar", a: "To send" },
+  { q: "Las respuestas", a: "Responses / answers" },
+  { q: "Las costumbres / las tradiciones", a: "Customs / traditions" },
+  { q: "Las cifras / los números / las estadísticas", a: "Figures / numbers / statistics" },
+  { q: "El enganche / el gancho", a: "Hook / attraction / appeal" },
+  { q: "El propósito / la razón", a: "Purpose / reason" },
+  { q: "Elegir / escoger / seleccionar", a: "To choose / select" },
+  { q: "Soler (o→ue) + infinitivo", a: "To usually / to tend to do something" },
+  { q: "El éxito / los logros", a: "Success / achievements" },
+  { q: "Aumentar / incrementar", a: "To increase" },
+  { q: "Mejorar la calidad de vida", a: "To improve quality of life" },
+  { q: "La moraleja del cuento", a: "The moral of the story" },
+  { q: "El fallecimiento / la muerte", a: "Death / passing away" },
+  { q: "La persona muerta / el difunto", a: "The deceased person" },
+  { q: "El cuidado de la salud", a: "Health care" },
+  { q: "El peregrino / la peregrinaje", a: "Pilgrim / pilgrimage" },
+  { q: "Las semejanzas y las diferencias", a: "Similarities and differences" },
+  { q: "Retrasar / demorar", a: "To delay" },
+  { q: "El riesgo (arriesgarse)", a: "Risk (to take a risk)" },
+  { q: "Milagroso / increíble", a: "Miraculous / incredible" },
+  { q: "Tener lugar / suceder / ocurrir", a: "To take place / happen / occur" },
+  { q: "Acercarse / alejarse", a: "To get closer / move away" },
+  { q: "A menudo / frecuentemente", a: "Often / frequently" },
+  { q: "El acontecimiento / el suceso / el evento", a: "Event / occurrence" },
+  { q: "Los demás / los otros", a: "The others" },
+  { q: "La contaminación", a: "Pollution" },
+  { q: "Disponible / la disponibilidad", a: "Available / availability" },
+  { q: "Mantener / preservar / conservar", a: "To maintain / preserve / conserve" },
+  { q: "El medio ambiente", a: "The environment" },
+  { q: "La sostenibilidad / la sustentabilidad", a: "Sustainability" },
+  { q: "Los patrones de consumo", a: "Consumption patterns" },
+  { q: "Los recursos naturales", a: "Natural resources" },
+  { q: "Imponer / obligar", a: "To impose / to force" },
+  { q: "El desarrollo", a: "Development" },
+  { q: "La eficacia", a: "Effectiveness / efficiency" },
+  { q: "Una región subdesarrollada", a: "An underdeveloped region" },
+  { q: "Una tormenta", a: "A storm" },
+  { q: "Una inundación", a: "A flood" },
+
+  { q: "UNESCO", a: "United Nations Educational, Scientific and Cultural Organization" },
+  { q: "EEUU", a: "United States" },
+  { q: "ONU", a: "United Nations" },
+  { q: "WYMHS", a: "World Youth Mental Health Survey" },
+
+  { q: "Un currículum / hoja de vida", a: "Resume / curriculum vitae" },
+  { q: "El rol / el papel", a: "Role" },
+  { q: "La grabación / el audio", a: "Recording / audio" },
+  { q: "Solicitar empleo / buscar trabajo / pedir un puesto", a: "To apply for a job" },
+  { q: "La locutora / el hablante", a: "Speaker / announcer" },
+  { q: "Recoger / agarrar / levantar", a: "To pick up / grab / lift" },
+  { q: "Un satélite / una sonda en órbita", a: "Satellite / space probe in orbit" },
+  { q: "La red / los nexos", a: "Network / connections" },
+  { q: "Las semillas / sembrar", a: "Seeds / to plant (sow)" },
+  { q: "Una sede", a: "Headquarters / location / site" },
+  { q: "Conocer acerca de", a: "To know about / learn about" },
+  { q: "Acerca de / sobre", a: "About / regarding" },
+  { q: "Jabón", a: "Soap" },
+  { q: "Jamón", a: "Ham" },
+  { q: "Espuma", a: "Foam" },
+  { q: "La cáscara de nuez", a: "Shell of a nut" },
+  { q: "Un enano / una estrella enana", a: "A dwarf / dwarf star" },
+  { q: "Un estado perfecto", a: "Perfect condition" },
+  { q: "Cenizas", a: "Ashes" },
+  { q: "Miércoles de Ceniza", a: "Ash Wednesday" },
+  { q: "Pascua", a: "Easter" },
+  { q: "Un incendio / un fuego", a: "Fire" },
+  { q: "El calentamiento global", a: "Global warming" },
+  { q: "El efecto invernadero", a: "Greenhouse effect" },
+  { q: "Poderoso / el poder", a: "Powerful / power" },
+  { q: "Una amenaza / amenazar", a: "Threat / to threaten" },
+  { q: "Los seres humanos", a: "Human beings" },
+  { q: "La vida cotidiana", a: "Everyday life" },
+  { q: "Un derecho", a: "A right" }
+]
+
 /* DECK MANAGEMENT */
-const all_decks = [u2flashcards, u1flashcards, genflashcards, ojosDCflashcards, repaso1sem2, ojosDC611]
-const deck_names = ["palabras mágicas: frequencia mediana", "temas 1-6 vocab", "general vocab", "ojos de carmen 1-3", "repaso uno sem 2", "ojos de carmen 6-11"]
+const all_decks = [u2flashcards, u1flashcards, genflashcards, ojosDCflashcards, repaso1sem2, ojosDC611, apvoc1]
+const deck_names = ["palabras mágicas: frequencia mediana", "temas 1-6 vocab", "general vocab", "ojos de carmen 1-3", "repaso uno sem 2", "ojos de carmen 6-11", "ap vocabulary march"]
 
 /* DEFAULT DECK INDEX */
-let deck_index = 3
+let deck_index = 6
 
 /* SELECT CURRENT DECK */
 let flashcards = all_decks[deck_index]
